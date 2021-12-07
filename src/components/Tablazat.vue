@@ -12,6 +12,9 @@
                 Quantity
             </th>
             <th>
+                Összérték
+            </th>
+            <th>
                 Operations
             </th>
         </tr>
@@ -40,9 +43,9 @@ export default {
         Changed(e) {
             this.$emit('post-row-changed', e)
         },
-        New(){
-            
-        }
+        /*New(){
+            this.$emit('post-new', e)
+        }*/
     },
 }
 </script>

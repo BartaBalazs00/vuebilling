@@ -3,9 +3,10 @@
     <td v-if="!edit">{{post.title}}</td>
     <td v-if="!edit">{{post.price}}</td>
     <td v-if="!edit">{{post.quantity}}</td>
+    <td v-if="!edit">{{post.quantity*post.price}}</td>
     <td v-if="!edit">
         <button @click="Edit">Edit</button>
-        <button @click="Delete">X</button>
+        <button @click="Delete(title)">X</button>
     </td>
     
 
@@ -42,9 +43,6 @@ export default {
                     },
             })
         },
-        Delete() {
-            
-        }
     }
 }
 </script>

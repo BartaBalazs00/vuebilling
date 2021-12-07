@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <tablazat :rows="rows" @post-row-changed="Changed"/>
+    <tablazat :rows="rows" @post-row-changed="Changed" @post-new="New"/>
     
   </div>
 </template>
@@ -51,6 +51,9 @@ export default {
           row.quantity = e.new.quantity
           return row
         })
+      },
+      New(){
+        
       }
     }
 }

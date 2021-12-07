@@ -20,7 +20,7 @@ export default {
     methods: {
         Add() {
             this.$emit('post-new', {
-                original: this.new,
+                original: this.post,
                 new: {
                     title: this.title,
                     price: this.price,
