@@ -35,7 +35,8 @@ Készíts raktárnyilvántartó programot. A tételekről nyilvántartjuk a nev�
 
 Plusz feladatok
 
-1. A feladatot komponensek segítségével oldd meg. (__+2p__)
+1. A feladatot komponensek segítségével oldd meg. 
+(__+2p__)
 2. Adj a táblázathoz egy plusz oszlopot összérték néven, ahol az adott tétel össz értékét jeleníted meg (price * quantity) (__+2p__)
 3. Adj a táblázathoz egy plusz sort ami tartalmazza a raktárban tárolt tételek összértékét. (__+2p__)
 4. Módosítsd a működést a következőképpen: Amennyiben létező tételt adnak hozzá ár nélkül, akkor a megadott mennyiséggel növeld a már meglévő tételsor mennyiségét. Ár megadásánál írd felül a meglévő sort. (__+2p__)

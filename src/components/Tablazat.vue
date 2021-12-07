@@ -23,6 +23,7 @@
                 :post="row"
                 @post-row-changed="Changed"
         />
+        <tr></tr>
     
         <newItem :new="rows" @post-new="New"/>
         
