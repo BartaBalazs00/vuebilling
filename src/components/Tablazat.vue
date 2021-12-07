@@ -31,7 +31,7 @@
             <td>{{rows.price*rows.quantity}}</td>
         </tr>
     
-        <newItem :new="rows" @post-new="New"/>
+        <newItem :new="row" @post-new="New"/>
         
    </table>
 </div>
