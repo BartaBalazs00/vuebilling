@@ -10,9 +10,9 @@
     </td>
     
 
-    <td v-if="edit"><input type="text" v-model="title"></td>
-    <td v-if="edit"><input type="text" v-model="price"></td>
-    <td v-if="edit"><input type="text" v-model="quantity"></td>
+    <td v-if="edit"><input type="text" v-bind="title" v-model="title"></td>
+    <td v-if="edit"><input type="text" v-bind="price" v-model="price"></td>
+    <td v-if="edit"><input type="text" v-bind="quantity" v-model="quantity"></td>
     <td v-if="edit"><button @click="Save">Save</button></td>
 </tr>
 </template>

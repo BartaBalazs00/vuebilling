@@ -50,8 +50,8 @@ export default {
         Changed(e) {
             this.$emit('post-row-changed', e)
         },
-        New(){
-            this.$emit('post-new')
+        New(e){
+            this.$emit('post-new',e)
         },
         Delete(e){
             this.$emit('post-row-delete', e)

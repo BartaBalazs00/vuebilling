@@ -27,8 +27,8 @@ export default {
                     },
             })
             this.title="",
-            this.price=null,
-            this.quantity=null
+            this.price="",
+            this.quantity=""
         }
     }
 }
