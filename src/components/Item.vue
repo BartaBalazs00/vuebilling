@@ -3,7 +3,11 @@
     <td v-if="!edit">{{post.title}}</td>
     <td v-if="!edit">{{post.price}}</td>
     <td v-if="!edit">{{post.quantity}}</td>
-    <td v-if="!edit"><button @click="Edit">Edit</button></td>
+    <td v-if="!edit">
+        <button @click="Edit">Edit</button>
+        <button @click="Delete">X</button>
+    </td>
+    
 
     <td v-if="edit"><input type="text" v-model="title"></td>
     <td v-if="edit"><input type="text" v-model="price"></td>
@@ -37,6 +41,9 @@ export default {
                     quantity: this.quantity
                     },
             })
+        },
+        Delete() {
+            
         }
     }
 }

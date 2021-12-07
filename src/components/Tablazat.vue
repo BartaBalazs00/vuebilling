@@ -3,29 +3,46 @@
     <table>
         <tr>
             <th>
-                title
+                Title
             </th>
             <th>
-                price
+                Price
             </th>
             <th>
-                quantity
+                Quantity
+            </th>
+            <th>
+                Operations
             </th>
         </tr>
             <item v-for="row in rows"
                 v-bind:key="row.title"
                 :post="row"
+                @post-row-changed="Changed"
         />
+    
+        <newItem :new="rows" @post-new="New"/>
+        
    </table>
 </div>
 </template>
 <script>
 import Item from './Item.vue'
+import NewItem from './NewItem.vue'
 
 export default {
     props: ['rows'],
     components:{
-        Item
+        Item,
+        NewItem
+    },
+    methods: {
+        Changed(e) {
+            this.$emit('post-row-changed', e)
+        },
+        New(){
+            
+        }
     },
 }
 </script>

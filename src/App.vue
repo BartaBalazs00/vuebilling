@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <tablazat :rows="rows" />
+    <tablazat :rows="rows" @post-row-changed="Changed"/>
+    
   </div>
 </template>
 
@@ -38,7 +39,20 @@ export default {
         },
       ]
     }
-  }
+  },
+  methods: {
+      Changed(e) {
+        this.rows.map(function (row) {
+          if (row.title != e.original.title || row.price != e.original.price || row.quantity != e.original.quantity) {
+            return row
+          }
+          row.title = e.new.title,
+          row.price = e.new.price,
+          row.quantity = e.new.quantity
+          return row
+        })
+      }
+    }
 }
 </script>
 
