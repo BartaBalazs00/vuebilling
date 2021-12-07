@@ -20,13 +20,15 @@ export default {
     methods: {
         Add() {
             this.$emit('post-new', {
-                original: this.post,
                 new: {
                     title: this.title,
                     price: this.price,
                     quantity: this.quantity
                     },
             })
+            this.title="",
+            this.price=null,
+            this.quantity=null
         }
     }
 }

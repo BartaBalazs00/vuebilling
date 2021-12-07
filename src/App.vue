@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <tablazat :rows="rows" @post-row-changed="Changed" @post-new="New"/>
+    <tablazat :rows="rows" @post-row-changed="Changed" @post-new="New" @post-row-delete="Delete"/>
     
   </div>
 </template>
@@ -52,9 +52,12 @@ export default {
           return row
         })
       },
-      New(){
-        
-      }
+      New(e){
+        this.rows.push(e.new)
+      },
+      Delete(e){
+          this.rows.splice(this.rows.indexOf(e.original), 1);
+        }
     }
 }
 </script>

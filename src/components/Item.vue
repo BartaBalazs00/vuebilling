@@ -6,7 +6,7 @@
     <td v-if="!edit">{{post.quantity*post.price}}</td>
     <td v-if="!edit">
         <button @click="Edit">Edit</button>
-        <button @click="Delete(title)">X</button>
+        <button @click="Delete">X</button>
     </td>
     
 
@@ -43,6 +43,11 @@ export default {
                     },
             })
         },
+        Delete(){
+            this.$emit('post-row-delete',{
+                original:this.row
+            })
+        }
     }
 }
 </script>

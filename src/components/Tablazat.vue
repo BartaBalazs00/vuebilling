@@ -22,8 +22,14 @@
                 v-bind:key="row.title"
                 :post="row"
                 @post-row-changed="Changed"
+                @post-row-delete="Delete"
         />
-        <tr></tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{rows.price*rows.quantity}}</td>
+        </tr>
     
         <newItem :new="rows" @post-new="New"/>
         
@@ -44,9 +50,12 @@ export default {
         Changed(e) {
             this.$emit('post-row-changed', e)
         },
-        /*New(){
-            this.$emit('post-new', e)
-        }*/
+        New(){
+            this.$emit('post-new')
+        },
+        Delete(e){
+            this.$emit('post-row-delete', e)
+        }
     },
 }
 </script>
